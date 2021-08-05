@@ -54,7 +54,7 @@ public class ButtonFunctions : MonoBehaviour
 
     private void StartGame()
     {
-        SceneManager.LoadScene(sceneName:"Intro Scene");
+        SceneManager.LoadScene(sceneName:"Game Proper");
     }
     private void OptionsMenu()
     {

@@ -20,7 +20,7 @@ public class VideoManager : MonoBehaviour
         if(isVideoFinished())
         {
             videoFinished = false;
-            SceneManager.LoadScene("Game Proper");
+            SceneManager.LoadScene("Game Menu");
         }
     }
 
