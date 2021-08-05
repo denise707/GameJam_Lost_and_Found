@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6af8896ed666e344e8540dbf9d5e5c68
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - walkingSound: {instanceID: 0}
+  - runningSound: {instanceID: 0}
+  - buttonSound: {instanceID: 0}
+  - audioSourceSFX: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
