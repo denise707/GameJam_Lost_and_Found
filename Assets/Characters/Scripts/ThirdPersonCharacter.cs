@@ -69,7 +69,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				HandleAirborneMovement(move);
 			}
 
-			ScaleCapsuleForCrouching(crouch);
+			//ScaleCapsuleForCrouching(crouch);
 			//PreventStandingInLowHeadroom();
 
 			// send input and other state parameters to the animator
