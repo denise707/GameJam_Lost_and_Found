@@ -89,27 +89,46 @@ public class SFXManager : MonoBehaviour
 
     private void playJumpStartSound()
     {
-        if (jumpStartSound != null)
-            AudioSource.PlayClipAtPoint(jumpStartSound, transform.position, audioSourceSFX.volume);
+        if(this.enabled == true)
+        {
+            if (jumpStartSound != null)
+            {
+                AudioSource.PlayClipAtPoint(jumpStartSound, transform.position, audioSourceSFX.volume);
+            }
 
-        else Debug.Log("no jumpstart sound file attached");
+            else Debug.Log("no jumpstart sound file attached");
+        }
+
+        
     }
 
     private void playJumpEndSound()
     {
-        if (jumpEndSound != null)
-            AudioSource.PlayClipAtPoint(jumpEndSound, transform.position, audioSourceSFX.volume);
+        if (this.enabled == true)
+        {
+            if (jumpEndSound != null)
+            {
+                AudioSource.PlayClipAtPoint(jumpEndSound, transform.position, audioSourceSFX.volume);
+            }
 
-        else Debug.Log("no jumpend sound file attached");
+            else Debug.Log("no jumpend sound file attached");
+        }
+
+        
     }
 
     private void playCaughtSound()
     {
         //audioSourceSFX.clip = jumpStartSound;
-        if (caughtSound != null)
-            AudioSource.PlayClipAtPoint(caughtSound, transform.position, audioSourceSFX.volume);
+        if (this.enabled == true)
+        {
+            if (caughtSound != null)
+            {
+                AudioSource.PlayClipAtPoint(caughtSound, transform.position, audioSourceSFX.volume);
+            }
 
-        else Debug.Log("no caught sound file attached");
+            else Debug.Log("no jumpend sound file attached");
+        }
     }
 
     private void playButtonSound()
@@ -119,8 +138,15 @@ public class SFXManager : MonoBehaviour
 
     private void playKeyGetSound()
     {
-        if(keypickupSound != null)
-            AudioSource.PlayClipAtPoint(keypickupSound, transform.position, audioSourceSFX.volume);
+        if (this.enabled == true)
+        {
+            if (jumpStartSound != null)
+            {
+                AudioSource.PlayClipAtPoint(jumpEndSound, transform.position, audioSourceSFX.volume);
+            }
+
+            else Debug.Log("no jumpend sound file attached");
+        }
     }
 
 
