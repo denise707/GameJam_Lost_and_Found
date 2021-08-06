@@ -47,7 +47,7 @@ public class PopUpManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && gameOver)
         {
             Debug.Log("Exit Game");
-            Application.Quit();
+            EventBroadcaster.Instance.PostEvent(EventNames.ON_QUIT_TO_MENU);
         }
     }
 
