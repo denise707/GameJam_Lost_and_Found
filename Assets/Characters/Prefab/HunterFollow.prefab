@@ -153,6 +153,7 @@ MonoBehaviour:
   m_MoveSpeedMultiplier: 1
   m_AnimSpeedMultiplier: 1
   m_GroundCheckDistance: 2
+  m_Animator: {fileID: 6347463537313612852}
 --- !u!82 &7462132589779724517
 AudioSource:
   m_ObjectHideFlags: 0

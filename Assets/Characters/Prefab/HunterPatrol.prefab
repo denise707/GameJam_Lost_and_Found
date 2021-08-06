@@ -411,6 +411,7 @@ MonoBehaviour:
   m_MoveSpeedMultiplier: 1
   m_AnimSpeedMultiplier: 1
   m_GroundCheckDistance: 2
+  m_Animator: {fileID: 5725266258362191656}
 --- !u!114 &8245058281180874764
 MonoBehaviour:
   m_ObjectHideFlags: 0

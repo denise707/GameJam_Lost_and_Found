@@ -29,7 +29,7 @@ public class BGMManager : MonoBehaviour
     {
         if (audioSourceBGM.isPlaying)
         {
-            Debug.Log("playing");
+            //Debug.Log("playing");
         }
     }
 
