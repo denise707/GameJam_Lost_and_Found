@@ -10,6 +10,7 @@ public class SFXManager : MonoBehaviour
     [SerializeField] AudioClip jumpStartSound = null;
     [SerializeField] AudioClip jumpEndSound = null;
     [SerializeField] AudioClip caughtSound = null;
+    [SerializeField] AudioClip keypickupSound = null;
 
     [SerializeField] private AudioSource audioSourceSFX;
     // Start is called before the first frame update
@@ -98,8 +99,6 @@ public class SFXManager : MonoBehaviour
 
             else Debug.Log("no jumpstart sound file attached");
         }
-
-        
     }
 
     private void playJumpEndSound()
@@ -140,9 +139,9 @@ public class SFXManager : MonoBehaviour
     {
         if (this.enabled == true)
         {
-            if (jumpStartSound != null)
+            if (keypickupSound != null)
             {
-                AudioSource.PlayClipAtPoint(jumpEndSound, transform.position, audioSourceSFX.volume);
+                AudioSource.PlayClipAtPoint(keypickupSound, transform.position, audioSourceSFX.volume);
             }
 
             else Debug.Log("no jumpend sound file attached");
