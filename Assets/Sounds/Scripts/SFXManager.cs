@@ -20,6 +20,7 @@ public class SFXManager : MonoBehaviour
 
         EventBroadcaster.Instance.AddObserver(EventNames.ON_PLAYER_WALK_SFX, playWalkingSound);
         EventBroadcaster.Instance.AddObserver(EventNames.ON_PLAYER_WALK_STOP_SFX, stopWalkingSound);
+        EventBroadcaster.Instance.AddObserver(EventNames.ON_PLAYER_ESCAPED, stopWalkingSound);
 
         EventBroadcaster.Instance.AddObserver(EventNames.ON_PLAYER_JUMP_START_SFX, playJumpStartSound);
         EventBroadcaster.Instance.AddObserver(EventNames.ON_PLAYER_JUMP_END_SFX, playJumpEndSound);
