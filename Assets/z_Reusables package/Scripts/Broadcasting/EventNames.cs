@@ -45,6 +45,9 @@ public class EventNames
 
 	public const string ON_UPDATE_CURSOR_STATE = "ON_UPDATE_CURSOR_STATE";
 
+	public const string ON_FULLSCREEN_TOGGLE = "ON_FULLSCREEN_TOGGLE";
+
+
 }
 
 

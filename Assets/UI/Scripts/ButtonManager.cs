@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ButtonManager : MonoBehaviour
 {
+    public bool isFullscreen;
     // Start is called before the first frame update
     void Start()
     {
@@ -64,5 +65,14 @@ public class ButtonManager : MonoBehaviour
         EventBroadcaster.Instance.PostEvent(EventNames.ON_PLAY_BUTTON_SFX);
         EventBroadcaster.Instance.PostEvent(EventNames.ON_CLOSE_HELP);
     }
+    public void ToggleFullscreen(bool isFullscreen)
+    {
+        EventBroadcaster.Instance.PostEvent(EventNames.ON_PLAY_BUTTON_SFX);
+
+        Parameters parameters = new Parameters();
+        parameters.PutExtra(ButtonFunctions.FULLSCREEN_BOOL, isFullscreen);
+        EventBroadcaster.Instance.PostEvent(EventNames.ON_FULLSCREEN_TOGGLE, parameters);
+    }
+
 
 }
