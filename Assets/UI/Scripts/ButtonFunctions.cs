@@ -14,6 +14,9 @@ public class ButtonFunctions : MonoBehaviour
     [SerializeField] private GameObject KeyUI;
     Color color;
 
+    public const string FULLSCREEN_BOOL = "FULLSCREEN_BOOL";
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +33,8 @@ public class ButtonFunctions : MonoBehaviour
         EventBroadcaster.Instance.AddObserver(EventNames.ON_KEY_LOST, this.LostKey);
         EventBroadcaster.Instance.AddObserver(EventNames.ON_OPEN_HELP, this.OpenHelp);
         EventBroadcaster.Instance.AddObserver(EventNames.ON_CLOSE_HELP, this.CloseHelp);
+        EventBroadcaster.Instance.AddObserver(EventNames.ON_FULLSCREEN_TOGGLE, this.ToggleFullscreen);
+
     }
 
     private void OnDestroy()
@@ -44,6 +49,8 @@ public class ButtonFunctions : MonoBehaviour
         EventBroadcaster.Instance.RemoveObserver(EventNames.ON_KEY_LOST);
         EventBroadcaster.Instance.RemoveObserver(EventNames.ON_OPEN_HELP);
         EventBroadcaster.Instance.RemoveObserver(EventNames.ON_CLOSE_HELP);
+        EventBroadcaster.Instance.RemoveObserver(EventNames.ON_FULLSCREEN_TOGGLE);
+
     }
 
     // Update is called once per frame
@@ -106,6 +113,13 @@ public class ButtonFunctions : MonoBehaviour
     private void CloseHelp()
     {
         HelpUI.SetActive(false);
+    }
+    private void ToggleFullscreen(Parameters parameters)
+    {
+        bool flag = parameters.GetBoolExtra(FULLSCREEN_BOOL, Screen.fullScreen);
+        Screen.fullScreen = flag;
+        Debug.Log("Fullscreen toggle is " + flag);
+      
     }
 }
 
