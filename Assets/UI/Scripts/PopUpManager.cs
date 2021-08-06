@@ -40,6 +40,7 @@ public class PopUpManager : MonoBehaviour
 
 
             CaughtUI.SetActive(false);
+            gameOver = false;
             Debug.Log("Continue Game");
         }
 
