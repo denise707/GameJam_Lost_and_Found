@@ -10,7 +10,6 @@ public class SFXManager : MonoBehaviour
     [SerializeField] AudioClip jumpStartSound = null;
     [SerializeField] AudioClip jumpEndSound = null;
     [SerializeField] AudioClip caughtSound = null;
-    [SerializeField] AudioClip keypickupSound = null;
 
     [SerializeField] private AudioSource audioSourceSFX;
     // Start is called before the first frame update
