@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
@@ -17,7 +18,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		[SerializeField] float m_GroundCheckDistance = 0.1f;
 
 		Rigidbody m_Rigidbody;
-		Animator m_Animator;
+		[SerializeField] Animator m_Animator;
 		bool m_IsGrounded;
 		bool m_isJumpWithDirection;
 		float m_OrigGroundCheckDistance;
@@ -31,7 +32,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		bool m_Crouching;
 
 
-		void Start()
+		void Awake()
 		{
 			m_Animator = GetComponent<Animator>();
 			m_Rigidbody = GetComponent<Rigidbody>();
@@ -42,6 +43,16 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 			m_Rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
 			m_OrigGroundCheckDistance = m_GroundCheckDistance;
+
+			if(m_Animator == null)
+            {
+				m_Animator = this.GetComponent<Animator>();
+
+				if(m_Animator == null)
+                {
+					SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                }
+            }
 		}
 
         public void Move(Vector3 move, bool crouch, bool jump)

@@ -83,7 +83,7 @@ public class SFXManager : MonoBehaviour
             if ((audioSourceSFX.clip == walkingSound || audioSourceSFX.clip == runningSound) && audioSourceSFX.isPlaying == true)
                 audioSourceSFX.Stop();
         }
-        Debug.Log("Stop walking sound");
+        //Debug.Log("Stop walking sound");
         
     }
 
