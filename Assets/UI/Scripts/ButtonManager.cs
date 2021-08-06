@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ButtonManager : MonoBehaviour
 {
-    public bool isFullscreen;
+    public bool isFullscreen = true;
     // Start is called before the first frame update
     void Start()
     {
